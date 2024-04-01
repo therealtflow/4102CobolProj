@@ -1,0 +1,127 @@
+h1 {
+  color: rgb(53, 160, 254);
+  font-weight: bold;
+}
+
+h2 {
+  color: royalblue;
+  font-weight: bold;
+  font-size: 33px;
+  line-height: 1.1;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 120px;
+  max-height: 120px;
+  float: left;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  line-height: 1.3;
+  margin: 16px;
+  padding: 0px;
+  background-color: whitesmoke;
+  color: black;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 20px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: darkgrey;
+}
+
+#divtop {
+  background-color: beige;
+}
+
+#divbottom {
+  background-color: greenyellow;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-text h1 {
+  font-size: 100px;
+  width: 1100px;
+}
+
+.app-text p {
+  font-size: 15px;
+  width: 650px;
+  line-height: 25px;
+  color: black;
+  margin: 30px 0 30px 40px;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  flex-grow: 1;
+}
+
+.div1, .div2, .div3 {
+  width: 21em;
+  height: 25em;
+  background-color: white;
+  box-shadow: 5px 5px 25px black;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+.searchbar {
+  position: relative;
+  margin-top: 20px;
+  height: 30px;
+  width: 200px;
+  display: flex;
+  cursor: pointer;
+  background: white;
+  transition: 0.8s;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.searchbar:hover input {
+  width: 200px;
+}
+
+.searchbar input {
+  outline: none;
+  border: none;
+  font-weight: 500;
+  background: transparent;
+}
+
+.searchbar a .fas {
+  color: aqua;
+  font-size: 18px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    height: 100%;
+    flex-direction: column;
+  }
+  .div1, .div2, .div3 {
+    max-width: 80%;
+    padding: 30px;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Magic Bank HTML Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="action_page.php" method="GET"></form>
+    <div class="header">
+        <div class="logo">
+            <a href="#"><img src="https://cdn-icons-png.freepik.com/512/3593/3593460.png" alt="dollar sign"></a>
+        </div>
+        <div class="app-text">    
+            <h1>BLUE MAGIC BANK</h1>
+        </div>
+      </div>
+      <div class="container">
+        <div class="div1">
+            <h2>Add Account</h2>
+            <p>New users may register an account here. You will need to provide a name, SSN, and current balance.</p>
+            <br>
+            <form>
+                <div>
+                    <label for="fname">First Name: </label>
+                    <input type="text" id="fname" placeholder="First Name..." required>
+                </div>
+                <br>
+                <div>
+                    <label for="lname">Last Name: </label>
+                    <input type="text" id="lname" placeholder="Last Name..." required>
+                </div>
+                <br>
+                <div>
+                    <label for="ssn">SSN: </label>
+                    <input type="text" id="ssn" placeholder="SSN..." required>
+                </div>
+                <br>
+                <div>
+                    <label for="balance">Balance: </label>
+                    <input type="text" id="balance" placeholder="Balance..." required>
+                </div>
+                <br>
+                <div>
+                    <input type="reset">
+                    <input type="submit">
+                </div>
+            </form>
+        </div>
+        <div class="div2">
+            <h2>Search for an Account</h2>
+            <p>You may search for any existing accounts using the searchbar. Enter a name, SSN, account ID, or balance to start searching.</p>
+            <br>
+            <div>
+                <label for="search">Search by: </label>
+                <select name="search" id="search">
+                    <option value="name">Name</option>
+                    <option value="ssn">SSN</option>
+                    <option value="account-id">Account ID</option>
+                    <option value="balance">Balance</option>
+                </select>
+                
+            </div>
+            <div class ="searchbar">
+                <input type="text" placeholder="   Search...">
+                <a href="#"><i class="fas fa-search"></i></a>
+            </div>
+        </div>
+        <div class="div3">
+            <h2>Make A Transaction</h2>
+            <p>You may make a transaction in this field. Select between withdrawal or deposit and input an amount.</p>
+            <br>
+            <form>
+                <div>
+                    <label for="type">Type: </label>
+                    <label>Deposit</label>
+                    <input type="radio" name="transaction">
+    
+                    <label>Withdrawal</label>
+                    <input type="radio" name="transaction">
+                </div>
+                <br>
+                <div>
+                    <input type="text" id="amount" placeholder="Enter Amount..." required>
+                </div>
+                <br>
+                <div>
+                    <input type="submit">
+                </div>
+            </form>
+        </div>
+      </div>
+</body>
+</html>
