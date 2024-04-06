@@ -15,14 +15,17 @@
            FD ACCOUNT.
            01 ACCOUNT-FILE.
                05 ACCOUNT-NUM PIC 9(5).
-               05 NAME PIC A(5).
-               05 ACCOUNT-BALANCE PIC 9(5).
+               05 ACCOUNT-SSN PIC ZZZZZZZZZZZZ.
+               05 FIRST-NAME PIC A(5).
+               05 LAST-NAME PIC A(5).
+               05 ACCOUNT-BALANCE-RAW PIC X(8).
+               05 ACCOUNT-BALANCE PIC 9(5)V99 VALUES ZEROES.
 
        WORKING-STORAGE SECTION.
        01 WS-ACCOUNT-NUM PIC 9(5).
        01 WS-CHOICE PIC 9.
-       01 WS-W-AMOUNT PIC 9(5).
-       01 WS-D-AMOUNT PIC 9(5).
+       01 WS-W-AMOUNT PIC 9(5)V99.
+       01 WS-D-AMOUNT PIC 9(5)V99.
        
        PROCEDURE DIVISION.
 
@@ -39,11 +42,14 @@
                    NOT AT END
                        IF ACCOUNT-NUM = WS-ACCOUNT-NUM
                            DISPLAY "Account found"
-                           MOVE FUNCTION TRIM(NAME) TO NAME
-                           MOVE FUNCTION TRIM(ACCOUNT-BALANCE) 
+                           MOVE FUNCTION TRIM(FIRST-NAME) TO FIRST-NAME
+                           MOVE FUNCTION TRIM(LAST-NAME) TO LAST-NAME
+                           MOVE FUNCTION TRIM(ACCOUNT-BALANCE-RAW) 
                            TO ACCOUNT-BALANCE
                            DISPLAY ACCOUNT-NUM
-                           DISPLAY NAME
+                           DISPLAY ACCOUNT-SSN
+                           DISPLAY FIRST-NAME
+                           DISPLAY LAST-NAME
                            DISPLAY "BALANCE: " ACCOUNT-BALANCE
                        END-IF
                END-READ
